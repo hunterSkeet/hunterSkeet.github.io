@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Time', 'Versus', 'Campaign', 'Survival', 'Scavenge', 'Realism'],
+        [ '10:00 PM', 269, 675, 17, 0, 38 ],
+    [ '11:00 PM', 213, 468, 17, 0, 34 ],
+    [ '12:00 AM', 158, 342, 14, 0, 18 ],
+    [ '1:00 AM', 96, 176, 4, 0, 21 ],
+    [ '2:00 AM', 49, 137, 2, 0, 4 ],
+    [ '3:00 AM', 12, 73, 1, 0, 4 ],
+    [ '4:00 AM', 0, 76, 1, 0, 1 ],
+    [ '6:00 AM', 24, 62, 0, 0, 1 ],
+    [ '7:00 AM', 24, 73, 0, 0, 6 ],
+    [ '8:00 AM', 41, 115, 2, 0, 5 ],
+    [ '9:00 AM', 54, 137, 3, 0, 9 ],
+    [ '10:00 AM', 83, 232, 13, 0, 22 ],
+    [ '11:00 AM', 142, 238, 13, 2, 18 ],
+    [ '12:00 PM', 133, 315, 6, 0, 13 ],
+    [ '1:00 PM', 168, 313, 11, 0, 21 ],
+    [ '2:00 PM', 199, 435, 37, 0, 31 ],
+    [ '3:00 PM', 228, 527, 28, 0, 42 ],
+    [ '4:00 PM', 241, 583, 32, 0, 46 ],
+    [ '5:00 PM', 268, 731, 48, 5, 40 ],
+    [ '6:00 PM', 337, 997, 48, 8, 64 ],
+    [ '7:00 PM', 388, 1181, 62, 8, 82 ],
+    [ '8:00 PM', 381, 1281, 53, 16, 86 ],
+    [ '9:00 PM', 393, 1220, 44, 2, 54 ]
+
+
+
+
+
+
+        ]);
+
+        var options = {
+          title: 'Global L4D2 players in dedicated servers. ',
+          hAxis: {title: 'Time',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <style>
+  body {
+      background-color: black;
+  }
+  </style>
+  <body>
+        
+    <div id="header" style="width: 100%; height: 50px;">[timezone: PST]</div>
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+  </body>
+</html>
