@@ -1,1 +1,1 @@
-https://hunterskeet.github.io/graph.html
+https://hunterskeet.github.io/graph2.html
