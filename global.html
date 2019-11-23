@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130185365-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130185365-2');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Area Spline</title>
+
+    <link href="../../assets/styles.css" rel="stylesheet" />
+
+    <style>
+      #header {
+           
+            max-width: 950px;
+            margin: 0px auto;
+        }
+        #tooltip {
+         
+            max-width: 950px;
+            margin: 10px auto;
+        }
+
+        #header2 {
+      
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        #bottom {
+         
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #middle {
+            height: 20px;
+            background-color: darkgray;
+           
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #chart {
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        #chart2 {
+            max-width: 950px;
+            margin: 35px auto;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="header">
+                <b><h4>Global Left 4 Dead 2 Charts by player count. </b> [11/22/2019] - (Friday) - Time Zone: (PST)  </h4>
+                
+              </div>
+
+              <div id="tooltip">
+                <b>Steam reported count:</b> Players in local servers, dedicated servers, singleplayer and idleing.
+                <br>
+                <b>All dedicated servers:</b> all global dedicated servers reported by the master server.
+                <br>
+                <b>Valve dedicated servers:</b> all Valve dedicated servers reported by the master server.
+                
+              </div>
+
+
+    <div id="chart">
+     
+    </div>
+
+    
+
+<div id="middle">
+        
+      </div>
+      <div id="header2">
+            <h4> Global player count by game mode. (all dedicated servers) </h4>
+          </div>
+    <div id="chart2">
+     
+        </div>
+
+        <div id="middle">
+        
+            </div>
+        <div id="bottom">
+                <h3> <a href="https://hunterskeet.github.io/usa.html"> Link to USA only charts. </a> </h3>
+              </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+
+    <script>
+        var options = {
+            chart: {
+                height: 750,
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'Steam reported count',
+                data: [      
+    5972,  6405,  6699,  7547,
+   9295, 11509, 13677, 13506,
+  11941, 10240,  9443,  9134,
+   9062,  8748,  8472,  7974,
+   7596,  7863,  8868,  9762,
+  10346, 10331, 10337, 10296,
+  10294
+
+
+
+]
+            }, {
+                name: 'All dedicated servers',
+                data: [
+                2637, 2742, 2825, 3063, 3677,
+  4604, 5499, 5549, 5111, 4504,
+  4298, 4393, 4494, 4536, 4414,
+  4133, 3694, 3797, 4352, 4664,
+  4954, 4887, 4763, 4545, 4539
+
+
+
+]
+            },
+          
+            {
+                name: 'Valve dedicated servers',
+                data: [
+                1554, 1559, 1558, 1729, 2019,
+  2623, 3299, 3565, 3245, 2961,
+  2953, 3204, 3282, 3414, 3421,
+  3218, 2829, 2830, 3289, 3463,
+  3620, 3477, 3207, 2906, 2805
+
+
+
+
+]
+            }
+          ],
+
+     
+            xaxis: {
+        categories: ['12:00am', '1:00am', '2:00am', '3:00am', '4:00am', '5:00am', '6:00am', '7:00am', '8:00am','9:00am', '10:00am', '11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00am'],
+      },
+      tooltip: {
+        y: [{
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val;
+            }
+          }
+        }]
+      }
+
+
+
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+    </script>
+
+
+
+
+<script>
+        var options = {
+            chart: {
+                height: 750,
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'Versus',
+                data: [      
+                558,  506,  580,  629,  726,
+   881, 1044, 1114, 1139, 1187,
+  1160, 1248, 1370, 1356, 1354,
+  1297, 1198, 1131, 1241, 1261,
+  1360, 1219, 1123,  870,  886
+
+
+
+
+]
+            }, {
+                name: 'Campaign',
+                data: [
+                1866, 2026, 2006, 2206, 2644,
+  3337, 4023, 3966, 3586, 2941,
+  2715, 2723, 2712, 2760, 2651,
+  2434, 2131, 2340, 2795, 3059,
+  3201, 3295, 3279, 3272, 3306
+
+
+
+
+]
+            },
+          
+            {
+                name: 'Survival',
+                data: [
+                91,  76,  81,  73, 104, 103,
+  117, 139,  98, 119, 113, 128,
+  145, 122, 148, 140, 136, 119,
+  120, 133, 125, 109, 111, 124,
+  116
+
+
+
+
+]
+            },
+{
+            name: 'Scavenge',
+                data: [
+                12, 17, 17, 14, 33, 43, 44, 57,
+  56, 36, 63, 87, 74, 98, 70, 75,
+  59, 50, 47, 46, 71, 28, 51, 36,
+  17
+
+
+
+
+
+]
+            },
+            {
+            name: 'Realism',
+                data: [
+                110, 117, 141, 141, 170, 240,
+  271, 273, 232, 221, 247, 207,
+  193, 200, 191, 187, 170, 157,
+  149, 165, 197, 236, 199, 243,
+  214
+
+
+
+
+
+
+]
+            }
+          ],
+
+     
+            xaxis: {
+        categories: ['12:00am', '1:00am', '2:00am', '3:00am', '4:00am', '5:00am', '6:00am', '7:00am', '8:00am','9:00am', '10:00am', '11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00am'],
+      },
+      tooltip: {
+        y: [{
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val;
+            }
+          }
+        }]
+      }
+
+
+
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart2"),
+            options
+        );
+
+        chart.render();
+    </script>
+
+</body>
+
+</html>

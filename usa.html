@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130185365-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130185365-2');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Area Spline</title>
+
+    <link href="../../assets/styles.css" rel="stylesheet" />
+
+    <style>
+      #header {
+           
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #tooltip {
+           
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        #header2 {
+            
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        #bottom {
+            
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #middle {
+            height: 20px;
+            background-color: darkgray;
+            
+            max-width: 950px;
+            margin: 35px auto;
+        }
+        #chart {
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        #chart2 {
+            max-width: 950px;
+            margin: 35px auto;
+        }
+    </style>
+</head>
+
+<body>
+        <div id="header">
+        <b><h4>USA Left 4 Dead 2 Charts by player count.</b> [11/22/2019] - (Friday) - Time Zone: (PST) </h4> 
+                
+              </div>
+
+             
+
+    <div id="chart">
+     
+    </div>
+
+    
+
+<div id="middle">
+        
+      </div>
+      <div id="header2">
+    <h4>USA player count by game mode. (all USA valve dedicated servers)</h4>
+          </div>
+    <div id="chart2">
+     
+        </div>
+
+        <div id="middle">
+        
+            </div>
+        <div id="bottom">
+            <h3> <a href="https://hunterskeet.github.io/global.html"> Link to Global charts. </a> </h3>
+              </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+
+    <script>
+        var options = {
+            chart: {
+                height: 750,
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'USA Valve Official Servers player count',
+                data: [      
+                508,  305,  180,  161,  119,
+    93,  122,  125,  185,  258,
+   357,  364,  409,  563,  659,
+   743,  859, 1094, 1438, 1606,
+  1826, 1733, 1444, 1097,  774
+
+]
+            }
+          ],
+
+     
+            xaxis: {
+        categories: ['12:00am', '1:00am', '2:00am', '3:00am', '4:00am', '5:00am', '6:00am', '7:00am', '8:00am','9:00am', '10:00am', '11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00am'],
+      },
+      tooltip: {
+        y: [{
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val;
+            }
+          }
+        }]
+      }
+
+
+
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart"),
+            options
+        );
+
+        chart.render();
+    </script>
+
+
+
+
+<script>
+        var options = {
+            chart: {
+                height: 750,
+                type: 'area',
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            series: [{
+                name: 'Versus',
+                data: [      
+                113,  57,  29,  18,  14,  17,  22,
+   27,  28,  59,  64,  85,  81, 131,
+  177, 202, 220, 272, 342, 400, 455,
+  407, 328, 204, 181
+
+
+
+
+]
+            }, {
+                name: 'Campaign',
+                data: [
+                329,  224,  132,  125,   97,  64,
+   92,   85,  146,  178,  252, 240,
+  305,  374,  421,  476,  576, 731,
+  993, 1088, 1242, 1201, 1017, 805,
+  528
+
+
+
+
+]
+            },
+          
+            {
+                name: 'Survival',
+                data: [
+                32, 16,  7,  9,  3,  4,  3,  7,
+   5, 10, 17, 15,  7, 26, 23, 30,
+  23, 34, 40, 41, 51, 43, 34, 27,
+  14
+
+
+
+
+]
+            },
+{
+            name: 'Scavenge',
+                data: [
+                2,  2,  5,  2,  2, 2,  2, 2,
+  2,  2,  9,  2,  2, 2,  9, 6,
+  4, 10, 12, 14, 18, 5, 18, 8,
+  5
+
+
+
+
+
+]
+            },
+            {
+            name: 'Realism',
+                data: [
+                32,  6,  7,  7,  3,  6,  3,  4,
+   4,  9, 15, 22, 14, 30, 29, 29,
+  36, 47, 51, 63, 60, 77, 47, 53,
+  46
+
+
+
+
+
+
+]
+            }
+          ],
+
+     
+            xaxis: {
+        categories: ['12:00am', '1:00am', '2:00am', '3:00am', '4:00am', '5:00am', '6:00am', '7:00am', '8:00am','9:00am', '10:00am', '11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00am'],
+      },
+      tooltip: {
+        y: [{
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val
+            }
+          }
+        }, {
+          title: {
+            formatter: function (val) {
+              return val;
+            }
+          }
+        }]
+      }
+
+
+
+        }
+
+        var chart = new ApexCharts(
+            document.querySelector("#chart2"),
+            options
+        );
+
+        chart.render();
+    </script>
+
+</body>
+
+</html>
