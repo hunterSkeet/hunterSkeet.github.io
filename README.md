@@ -1,3 +1,11 @@
+Working servers list:
+<br>
+<a href="https://hunterskeet.github.io/servers.html">https://hunterskeet.github.io/servers.html </a> 
+<br>
+
+--------------------------------------
+L4d2 player stats:
+<br>
 Global stats:
 <a href="https://hunterskeet.github.io/global.html">https://hunterskeet.github.io/global.html </a> 
 <br>
